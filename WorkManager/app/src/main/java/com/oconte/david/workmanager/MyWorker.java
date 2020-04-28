@@ -30,7 +30,7 @@ public class MyWorker extends Worker {
     @Override
     public Result doWork() {
         displayNotification("My Worker", "Hey I finished my work");
-        return Result.success();
+        return Result.SUCCESS;
     }
 
 
