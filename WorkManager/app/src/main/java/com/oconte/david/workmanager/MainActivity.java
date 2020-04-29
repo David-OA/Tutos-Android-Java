@@ -1,48 +1,59 @@
 package com.oconte.david.workmanager;
 
 import android.arch.lifecycle.Observer;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
+import androidx.work.WorkStatus;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //This is the subclass of our WorkRequest
-        final OneTimeWorkRequest workRequest = new OneTimeWorkRequest.Builder(MyWorker.class).build();
+        mTextView = findViewById(R.id.textView);
 
-        //A click listener for the button
-        //inside the onClick method we will perform the work
-        findViewById(R.id.buttonEnqueue).setOnClickListener(new View.OnClickListener() {
+
+        Data data = new Data.Builder()
+                .putString(MyWorker.EXTRA_TITLE, "Message from Activity!")
+                .putString(MyWorker.EXTRA_TEXT, "Hi! I have come from activity.")
+                .build();
+
+        //This is the subclass of our WorkRequest
+        final OneTimeWorkRequest simpleRequest = new OneTimeWorkRequest.Builder(MyWorker.class)
+                .setInputData(data)
+                .build();
+
+        findViewById(R.id.simpleWorkButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Enqueuing the work request
-                WorkManager.getInstance().enqueue(workRequest);
+                WorkManager.getInstance().enqueue(simpleRequest);
             }
         });
 
 
-        //Getting the TextView
-        final TextView textView = findViewById(R.id.textViewStatus);
-
-        //Listening to the work status
-        WorkManager.getInstance().getWorkInfoByIdLiveData(workRequest.getId())
-                .observe(this, new Observer<WorkInfo>() {
+        WorkManager.getInstance().getStatusById(simpleRequest.getId())
+                .observe(this, new Observer<WorkStatus>() {
                     @Override
-                    public void onChanged(@Nullable WorkInfo workInfo) {
+                    public void onChanged(@Nullable WorkStatus workStatus) {
+                        if (workStatus != null) {
+                            mTextView.append("SimpleWorkRequest: " + workStatus.getState().name() + "\n");
+                        }
 
-                        //Displaying the status into TextView
-                        textView.append(workInfo.getState().name() + "\n");
+                        if (workStatus != null && workStatus.getState().isFinished()) {
+                            String message = workStatus.getOutputData().getString(MyWorker.EXTRA_OUTPUT_MESSAGE, "Default message");
+                            mTextView.append("SimpleWorkRequest (Data): " + message);
+                        }
                     }
                 });
     }
