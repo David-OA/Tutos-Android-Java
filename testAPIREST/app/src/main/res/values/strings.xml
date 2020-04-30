@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">testAPIREST</string>
+    <string name="hello_blank_fragment">Clique pour lire le New York Time</string>
+</resources>

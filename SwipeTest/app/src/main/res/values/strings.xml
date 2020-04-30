@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SwipeTest</string>
+    <string name="tvswipDescription">tvswipDescription</string>
+
+    <string name="toastTop"> Ca marche</string>
+    <string name="toastRight">La aussi</string>
+    <string name="toastLeft">toujours</string>
+    <string name="toastBottom">Parfait</string>
+</resources>
