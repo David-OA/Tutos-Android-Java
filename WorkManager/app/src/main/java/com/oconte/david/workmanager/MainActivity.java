@@ -60,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
                 WorkManager.getInstance().enqueue(simpleRequest);
                 //WorkManager.getInstance().enqueue(periodicWorkRequest);
 
+                // Chaining Tasks
+                /*WorkManager.getInstance()
+                        .beginWith(workA)
+                        .then(workB)
+                        .then(workC)
+                        .enqueue();
+                */
+
             }
         });
 
