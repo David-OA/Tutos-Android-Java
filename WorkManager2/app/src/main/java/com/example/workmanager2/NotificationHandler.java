@@ -10,6 +10,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.work.Constraints;
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
@@ -18,8 +19,8 @@ import java.util.concurrent.TimeUnit;
 
 public class NotificationHandler extends Worker {
 
-    public final String CHANNEL_ID = "12";
-    public final int notificatioId = 1;
+    public final String CHANNEL_ID = "122";
+    public final int notificatioId = 11;
 
     public NotificationHandler(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -66,5 +67,14 @@ public class NotificationHandler extends Worker {
                 .setRequiresCharging(true)
                 .build();
         return constraints;
+    }
+
+
+    public static void periodicWorkRequest(){
+        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(NotificationHandler.class,10,TimeUnit.MINUTES)
+                .setInitialDelay(2,TimeUnit.MINUTES)
+                .setConstraints(setConstraints())
+                .build();
+        WorkManager.getInstance().enqueue(periodicWorkRequest);
     }
 }
