@@ -10,7 +10,7 @@ import java.util.Calendar;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
-class TimePickerFragment extends DialogFragment {
+public class TimePickerFragment extends DialogFragment {
 
     @NonNull
     @Override

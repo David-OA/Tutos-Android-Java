@@ -9,7 +9,7 @@ import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
-class NotificationHelper extends ContextWrapper {
+public class NotificationHelper extends ContextWrapper {
 
     public static final String channelID = "channelID";
     public static final String channelName = "Channel Name";

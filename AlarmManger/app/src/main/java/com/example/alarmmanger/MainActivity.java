@@ -3,6 +3,7 @@ package com.example.alarmmanger;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         mTextView.setText(timeText);
     }
 
+    @SuppressLint("NewApi")
     private void startAlarm(Calendar c) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
