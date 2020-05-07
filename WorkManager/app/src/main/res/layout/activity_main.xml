@@ -14,4 +14,14 @@
         android:text="Enqueue Work"
         android:textAllCaps="false" />
 
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:textColor="#ffffff" />
+
 </RelativeLayout>
