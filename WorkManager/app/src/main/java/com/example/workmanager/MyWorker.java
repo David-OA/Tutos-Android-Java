@@ -12,6 +12,10 @@ import androidx.work.WorkerParameters;
 public class MyWorker extends Worker {
 
 
+    //a public static string that will be used as the key
+    //for sending and receiving data
+    public static final String TASK_DESC = "task_desc";
+
     public MyWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
     }
@@ -29,8 +33,12 @@ public class MyWorker extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        displayNotification("My Worker", "Hey I finished my work");
-        return null;
+
+        //getting the input data
+        String taskDesc = getInputData().getString(TASK_DESC);
+
+        displayNotification("My Worker", taskDesc);
+        return Result.success();
     }
 
     /*
