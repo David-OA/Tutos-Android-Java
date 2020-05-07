@@ -1,11 +1,15 @@
 package com.example.workmanager;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,5 +30,19 @@ public class MainActivity extends AppCompatActivity {
                 WorkManager.getInstance().enqueue(workRequest);
             }
         });
+
+        //Getting the TextView
+        final TextView textView = findViewById(R.id.textViewStatus);
+
+        //Listening to the work status
+        WorkManager.getInstance().getWorkInfoByIdLiveData(workRequest.getId())
+                .observe(this, new Observer<WorkInfo>() {
+                    @Override
+                    public void onChanged(@Nullable WorkInfo workInfo) {
+
+                        //Displaying the status into TextView
+                        textView.append(workInfo.getState().name() + "\n");
+                    }
+                });
     }
 }
