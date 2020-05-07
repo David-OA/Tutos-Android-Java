@@ -45,7 +45,7 @@ public class MyWorker extends Worker {
                 .putString(TASK_DESC, "The conclusion of the task")
                 .build();
 
-        
+
 
         return Result.success();
     }
