@@ -6,6 +6,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
+import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
@@ -38,6 +39,14 @@ public class MyWorker extends Worker {
         String taskDesc = getInputData().getString(TASK_DESC);
 
         displayNotification("My Worker", taskDesc);
+
+        //setting output data
+        Data data = new Data.Builder()
+                .putString(TASK_DESC, "The conclusion of the task")
+                .build();
+
+        
+
         return Result.success();
     }
 

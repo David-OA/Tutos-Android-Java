@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onChanged(@Nullable WorkInfo workInfo) {
 
+                        //receiving back the data
+                        if(workInfo != null && workInfo.getState().isFinished())
+                            textView.append(workInfo.getOutputData().getString(MyWorker.TASK_DESC) + "\n");
+
                         //Displaying the status into TextView
                         textView.append(workInfo.getState().name() + "\n");
                     }
