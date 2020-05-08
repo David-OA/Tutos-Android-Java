@@ -44,10 +44,9 @@ public class MyWorker extends Worker {
         Data data = new Data.Builder()
                 .putString(TASK_DESC, "The conclusion of the task")
                 .build();
+        
 
-
-
-        return Result.success();
+        return Result.success(data);
     }
 
     /*

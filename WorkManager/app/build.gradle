@@ -33,5 +33,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //WorkManager
-    implementation 'android.arch.work:work-runtime:1.0.1'
+    implementation 'android.arch.work:work-runtime:2.3.4'
 }
