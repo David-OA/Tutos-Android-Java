@@ -3,14 +3,18 @@ package com.example.workmanager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
+import androidx.work.Constraints;
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,9 +30,18 @@ public class MainActivity extends AppCompatActivity {
                 .putString(MyWorker.TASK_DESC, "The task data passed from MainActivity")
                 .build();
 
+        //creating constraints
+        Constraints constraints = new Constraints.Builder()
+                .setRequiresCharging(true) // you can add as many constraints as you want
+                .build();
+
         //This is the subclass of our WorkRequest
         final OneTimeWorkRequest workRequest = new OneTimeWorkRequest.Builder(MyWorker.class)
                 .setInputData(data)
+                .setConstraints(constraints)
+                .build();
+
+        final PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES)
                 .build();
 
         //A click listener for the button
@@ -37,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Enqueuing the work request
-                WorkManager.getInstance().enqueue(workRequest);
+                //WorkManager.getInstance().enqueue(workRequest);
+                WorkManager.getInstance().enqueue(periodicWorkRequest);
             }
         });
 
@@ -45,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView textView = findViewById(R.id.textViewStatus);
 
         //Listening to the work status
-        WorkManager.getInstance().getWorkInfoByIdLiveData(workRequest.getId())
+        WorkManager.getInstance().getWorkInfoByIdLiveData(periodicWorkRequest.getId())
                 .observe(this, new Observer<WorkInfo>() {
                     @Override
                     public void onChanged(@Nullable WorkInfo workInfo) {
