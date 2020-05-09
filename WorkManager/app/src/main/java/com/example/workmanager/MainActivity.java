@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //we can put as many variables needed
         Data data = new Data.Builder()
                 .putString(MyWorker.TASK_DESC, "The task data passed from MainActivity")
+                .putString(MyWorker.TASK_DESC2, "j'ajoute de la data")
                 .build();
 
         //creating constraints
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 .setConstraints(constraints)
                 .build();
 
-        final PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 1, TimeUnit.HOURS)
+        final PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES)
                 .build();
 
         //A click listener for the button

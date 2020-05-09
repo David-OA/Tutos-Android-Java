@@ -16,6 +16,7 @@ public class MyWorker extends Worker {
     //a public static string that will be used as the key
     //for sending and receiving data
     public static final String TASK_DESC = "task_desc";
+    public static final String TASK_DESC2 = "task_desc2";
 
     public MyWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -38,11 +39,14 @@ public class MyWorker extends Worker {
         //getting the input data
         String taskDesc = getInputData().getString(TASK_DESC);
 
-        displayNotification("My Worker", taskDesc);
+        String taskDesc2 = getInputData().getString(TASK_DESC2);
+
+        displayNotification("My Worker", taskDesc, taskDesc2);
 
         //setting output data
         Data data = new Data.Builder()
                 .putString(TASK_DESC, "The conclusion of the task")
+                .putString(TASK_DESC2, "I add some data")
                 .build();
 
 
@@ -56,7 +60,7 @@ public class MyWorker extends Worker {
      * you should check the Android Notification Tutorial
      */
 
-    private void displayNotification(String title, String task) {
+    private void displayNotification(String title, String task, String tasky) {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -67,6 +71,7 @@ public class MyWorker extends Worker {
         NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "simplifiedcoding")
                 .setContentTitle(title)
                 .setContentText(task)
+                .setContentText(tasky)
                 .setSmallIcon(R.mipmap.ic_launcher);
 
         notificationManager.notify(1, notification.build());
