@@ -47,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
         tweets.add(new Tweet(Color.GREEN, "Logan", "Que c'est beau..."));
         tweets.add(new Tweet(Color.RED, "Mathieu", "Il est quelle heure ??"));
         tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
+        tweets.add(new Tweet(Color.GRAY, "Willy", "On y est presque"));
         return tweets;
     }
 
