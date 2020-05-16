@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        listView = (ListView) findViewById(R.id.listView);
+
         //afficherListeNoms();
         afficherListeTweets();
     }
