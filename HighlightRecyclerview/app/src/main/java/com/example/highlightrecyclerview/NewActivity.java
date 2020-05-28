@@ -23,7 +23,7 @@ public class NewActivity extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.image_view);
 
         textView.setText(Common.currentItem.getName());
-        if (Common.currentItem.isChecked())
+        if (!Common.currentItem.isChecked())
             imageView.setImageResource(R.drawable.ic_clear_black_24dp);
         else
             imageView.setImageResource(R.drawable.ic_check_black_24dp);
