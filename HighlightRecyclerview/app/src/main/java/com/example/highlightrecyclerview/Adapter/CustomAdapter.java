@@ -35,7 +35,7 @@ class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickLi
         super(itemView);
 
         textView = (TextView)itemView.findViewById(R.id.text_view);
-        itemView = (ImageView)itemView.findViewById(R.id.image_view);
+        imageView = (ImageView)itemView.findViewById(R.id.image_view);
         itemView.setOnClickListener(this);
     }
 
@@ -52,6 +52,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder>{
     Context context;
 
     int row_index = -1; // Default no row choose.
+
+    public CustomAdapter(List<Item> items, Context context) {
+        this.items = items;
+        this.context = context;
+    }
 
     @NonNull
     @Override

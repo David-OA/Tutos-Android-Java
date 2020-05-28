@@ -8,16 +8,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.highlightrecyclerview.Adapter.CustomAdapter;
 import com.example.highlightrecyclerview.Model.Item;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView list_item;
     RecyclerView.LayoutManager layoutManager;
-    List<Item> items;
+    List<Item> items = new ArrayList<>();
     FloatingActionButton fab;
 
     @Override
@@ -51,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
                 item.setChecked(true);
             else
                 item.setChecked(false);
+
             items.add(item);
         }
+
+        //Create Adapter
+        CustomAdapter adapter = new CustomAdapter(items, this);
+        list_item.setAdapter(adapter);
     }
 }
