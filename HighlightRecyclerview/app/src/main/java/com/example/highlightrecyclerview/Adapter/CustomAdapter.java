@@ -87,13 +87,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder>{
 
         // Set highlight color
         if (row_index==position){
-            holder.itemView.setBackgroundColor(Color.parseColor("#F8F8FA"));
-            holder.textView.setTextColor(Color.parseColor("#c5c5c7"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#46d88f"));
+            holder.textView.setTextColor(Color.parseColor("#c5cf00"));
         }
         else
         {
-            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            holder.textView.setTextColor(Color.parseColor("#000000"));
+            holder.itemView.setBackgroundColor(Color.parseColor("#4630c2"));
+            holder.textView.setTextColor(Color.parseColor("#4629f9"));
         }
 
 
