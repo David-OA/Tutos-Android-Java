@@ -9,6 +9,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -28,12 +29,12 @@ public class ExampleInstrumentedTest {
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<MainActivity>(MainActivity.class, false, false);
 
     @Test
-    public void useAppContext() {
-        // Context of the app under test.
+    public void testListView() {
 
         //Start the MainActivity
         mActivityRule.launchActivity(null);
 
         onView(withId(R.id.listView)).check(matches(isDisplayed()));
+
     }
 }
