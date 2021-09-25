@@ -1,3 +1,123 @@
 <resources>
     <string name="app_name">subMenu</string>
+
+
+
+    <string name="apr_s_avoir_pans_et_amen_sa_monture_en_main_sur_le_terrain_tre_capable_de_se_d_placer_au_pas_et_au_trot">Après avoir pansé et amené sa monture en main sur le terrain, être capable de se déplacer au pas et au trot.</string>
+    <string name="equitation">Equitation</string>
+    <string name="au_pas">Au pas :</string>
+    <string name="rechercher_son_quilibre_assis">• Rechercher son équilibre assis.</string>
+    <string name="s_arr_ter">• S’arrêter.</string>
+    <string name="partir_au_pas">• Partir au pas.</string>
+    <string name="entretenir_le_pas">• Entretenir le pas.</string>
+    <string name="conduire_sur_des_courbes_larges">• Conduire sur des courbes larges.</string>
+    <string name="au_trot">Au trot :</string>
+    <string name="d_couvrir_son_quilibre">• Découvrir son équilibre.</string>
+    <string name="partir_au_trot">• Partir au trot.</string>
+    <string name="entretenir_le_trot">• Entretenir le trot.</string>
+    <string name="revenir_au_pas">• Revenir au pas.</string>
+    <string name="au_galop">Au galop :</string>
+    <string name="soins">Soins</string>
+    <string name="aborder_mettre_un_licol_attacher">• Aborder, mettre un licol, attacher.</string>
+    <string name="effectuer_un_pansage_l_mentaire">• Effectuer un pansage élémentaire.</string>
+    <string name="amener_sa_monture_en_filet_en_main_sur_le_terrain">• Amener sa monture en filet en main sur le terrain.</string>
+    <string name="d_brider_desseller">• Débrider, desseller.</string>
+    <string name="connaissances">Connaissances</string>
+    <string name="notions_des_diff_rentes_activit_s_questres">• Notions des différentes activités équestres.</string>
+    <string name="r_gles_l_mentaires_de_s_curit">• Règles élémentaires de sécurité.</string>
+    <string name="le_mat_riel_du_pansage_l_mentaire">• Le matériel du pansage élémentaire.</string>
+
+    <string name="les_robes">Les robes</string>
+    <string name="la_couleur_des_poils_et_des_crins_r_partis_sur_le_corps_et_les_membres_du_cheval_ou_du_poney_d_termine_la_robe_en_dehors_des_marques_blanches_pouvant_exister_sur_la_t_te_et_les_membres_il_existe_douze_robes_r_parties_en_deux_familles_les_robes_simples_et_les_robes_compos_es">La couleur des poils et des crins répartis sur le corps et les membres du cheval ou du poney détermine la robe, en dehors des marques blanches pouvant exister sur la tête et les membres. Il existe douze robes réparties en deux familles : les robes simples et les robes composées.</string>
+    <string name="les_robes_simples">Les robes simples</string>
+    <string name="une_seule_couleur_de_poils_sur_l_ensemble_du_corps_les_crins_et_les_extr_mit_s_bas_des_membres_partir_des_articulations_des_genoux_et_des_jarrets_inclus_quatre_couleurs_constituent_ce_groupe_de_robes">Une seule couleur de poils sur l’ensemble du corps, les crins et les extrémités (bas des membres à partir des articulations des genoux et des jarrets inclus). Quatre couleurs constituent ce groupe de robes :</string>
+    <string name="blancb">• BlancB</string>
+    <string name="alezana">• AlezanA</string>
+    <string name="noirn">• NoirN</string>
+    <string name="caf_au_laitc">• Café au laitC</string>
+    <string name="crins_poils_longs_sur_la_crini_re_et_la_queue">Crins : poils longs sur la crinière et la queue.</string>
+
+    <string name="les_robes_compos_es">Les robes composées</string>
+    <string name="cette_cat_gorie_de_robes_est_subdivis_e_en_quatre_classes">Cette catégorie de robes est subdivisée en Quatre classes :</string>
+    <string name="les_robes_compos_es_de_deux_couleurs_s_par_es_b_i_s">• Les robes composées de Deux Couleurs Séparées : B.I.S</string>
+    <string name="les_robes_compos_es_de_deux_couleurs_m_lang_es_g_a_l">• Les robes composées de Deux Couleurs Mélangées : G.A.L</string>
+    <string name="la_robe_compos_e_de_trois_couleurs_m_lang_es_r">• La robe composée de Trois Couleurs Mélangées : R</string>
+    <string name="les_robes_compos_es_de_deux_robes_distinctes_p">• Les robes composées de Deux Robes Distinctes : P</string>
+    <string name="les_extr_mit_s_et_les_crins_sont_noirs_trois_couleurs_possibles_pour_le_corps">Les extrémités et les crins sont noirs, trois couleurs possibles pour le corps :</string>
+    <string name="bai_poils_marrons_extr_mit_s_et_crins_noirs">• Bai : poils marrons, extrémités et crins noirs.</string>
+    <string name="isabelle_poils_caf_au_lait_extr_mit_s_et_crins_noirs">• Isabelle : poils café au lait, extrémités et crins noirs.</string>
+    <string name="souris_poils_gris_unis_extr_mit_s_et_crins_noirs">• Souris : poils gris unis, extrémités et crins noirs</string>
+    <string name="nous_vous_proposons_deux_moyens_mn_motechniques_pour_vous_souvenir_des_12_robes_les_initiales_b_a_n_c_b_l_s_g_a_l_rp_ou_bien_bel_animal_n_cheval_b_a_n_c_beaut_irr_sistiblement_sage_b_i_s_galope_avec_l_g_ret_g_a_l_royal_partenaire_rp">Nous vous proposons deux moyens mnémotechniques pour vous souvenir des 12 robes : les initiales : B.A.N.C, B.l.S, G.A.L, RP ou bien : Bel Animal Né Cheval (B.A.N.C) Beauté irrésistiblement Sage (B.I.S) Galope Avec Légèreté (G.A.L) Royal Partenaire (RP)</string>
+    <string name="les_trois_robes_peuvent_tre_issues_des_m_langes_blanc_et_noir_blanc_et_alezan_noir_et_alezan">Les trois robes peuvent être issues des mélanges : blanc et noir, blanc et alezan, noir et alezan.</string>
+    <string name="ces_m_langes_pr_sentent_un_aspect_uniforme_sur_le_a_corps_les_extr_mit_s_et_les_crins">Ces mélanges présentent un aspect uniforme sur le a corps, les extrémités et les crins.</string>
+    <string name="gris_poils_extr_mit_s_et_crins_blancs_et_noirs_m_lang_s">• Gris : poils, extrémités et crins blancs et noirs mélangés.</string>
+    <string name="aub_re_poils_extr_mit_s_et_crins_blancs_et_alezans_m_lang_s">• Aubère : poils, extrémités et crins blancs et alezans mélangés.</string>
+    <string name="louvet_poils_extr_mit_s_et_crins_noirs_et_alezans_m_lang_s">• Louvet : poils, extrémités et crins noirs et alezans mélangés.</string>
+    <string name="il_n_existe_qu_une_seule_robe_repr_sentant_ce_m_lange_des_trois_couleurs_blanche_alezane_et_noire_m_lange_uniform_ment_r_parti_sur_le_corps_les_extr_mit_s_et_les_crins_la_robe_rouanne">Il n’existe qu’une seule robe représentant ce mélange des trois couleurs Blanche, Alezane et Noire, mélange (uniformément) réparti sur le corps, les extrémités et les crins : la robe Rouanne.</string>
+    <string name="les_robes_compos_es_de_deux_robes_s_par_es_p">Les robes composées de deux robes séparées : P</string>
+    <string name="cette_appellation_est_d_termin_e_par_la_juxtaposition_d_une_robe_la_robe_blanche">Cette appellation est déterminée par la juxtaposition d’une robe à la robe Blanche.</string>
+    <string name="trois_robes_peuvent_ainsi_tacher_la_robe_blanche">Trois robes peuvent ainsi (tacher) la robe blanche :.</string>
+    <string name="noire_alezane_baie">• Noire • Alezane • Baie</string>
+    <string name="quand_il_y_a_pr_dominance_de_la_robe_blanche_sur_la_noire_alezane_ou_baie_on_dit_que_le_cheval_est_pie_noir_pie_alezan_ou_pie_bai">Quand il y a prédominance de la robe blanche sur la noire, alezane ou baie, on dit que le cheval est Pie-Noir, Pie-Alezan ou Pie-Bai.</string>
+    <string name="quand_il_y_a_pr_dominance_des_taches_noires_alezanes_ou_baies_sur_la_robe_blanche_on_dit_que_le_cheval_est_noir_pie_alezan_pie_ou_bai_pie">Quand il y a prédominance des taches noires, alezanes ou baies sur la robe blanche, on dit que le cheval est Noir-Pie, Alezan-Pie ou Bai-Pie.</string>
+
+    <string name="les_parties_ext_rieurs_du_cheval_et_du_poney">Les parties extérieurs du cheval et du poney</string>
+    <string name="l_ensemble_du_cheval_est_divis_en_trois_parties_principales">L’ensemble du cheval est divisé en trois parties principales :</string>
+    <string name="avant_main">• Avant-main.</string>
+    <string name="corps">• Corps.</string>
+    <string name="arri_re_main">• Arrière-main.</string>
+    <string name="lorsque_vous_tes_cheval_globalement">Lorsque vous êtes à cheval, globalement :</string>
+    <string name="l_avant_main_se_situe_devant_vous">• L’avant-main se situe devant vous.</string>
+    <string name="le_corps_sous_vous">• Le corps sous vous.</string>
+    <string name="l_arri_re_main_derri_re_vous">• L’arrière-main derrière vous.</string>
+
+    <string name="aborder">Aborder</string>
+    <string name="pr_venez_votre_cheval_ou_poney_avant_de_le_toucher">Prévenez votre cheval ou poney avant de le toucher.</string>
+    <string name="s_il_ne_vous_voit_pas_parlez_lui_pour_attirer_son_attention_et_abordez_le_franchement_si_possible_par_la_gauche_en_vitant_de_faire_des_gestes_brusques">S’il ne vous voit pas, parlez-lui pour attirer son attention, et abordez-le franchement, si possible par la gauche, en évitant de faire des gestes brusques.</string>
+    <string name="pour_montrer_votre_monture_votre_intention_pacifique_appelez_la_par_son_nom_et_tendez_la_main_pour_la_caresser">Pour montrer à votre monture votre intention pacifique, appelez-la par son nom et tendez la main pour la caresser.</string>
+    <string name="nous_avons_conserv_de_l_poque_de_la_chevalerie_l_habitude_d_aborder_notre_monture_par_la_gauche">Nous avons conservé de l’époque de la chevalerie, l’habitude d’aborder notre monture par la gauche.</string>
+    <string name="en_effet_portant_l_p_e_gauche_le_chevalier_n_avait_d_autre_choix_que_d_aborder_et_monter_son_destrier_cheval_de_bataille_par_la_gauche_s_il_ne_voulait_pas_le_blesser">En effet, portant l’épée à gauche, le chevalier n’avait d’autre choix que d’aborder et monter son destrier (cheval de bataille) par la gauche, s’il ne voulait pas le blesser.</string>
+    <string name="ainsi_nos_chevaux_sont_habitues_a_tre_mont_s_et_marches_en_main_a_gauche">Ainsi nos chevaux sont habitues a être montés et marches en main a gauche.</string>
+    <string name="le_langage_des_oreilles_observez_l_orientation_des_oreilles_de_votre_monture_elle_vous_renseignera_sur_son_humeur">Le langage des oreilles Observez l’orientation des oreilles de votre monture, elle vous renseignera sur son humeur.</string>
+    <string name="oreilles_couch_es_en_arri_re_et_naseaux_pinc_s_cheval_m_fiant_cavalier_prudence">Oreilles couchées en arrière et naseaux pincés = cheval méfiant. Cavalier : prudence</string>
+    <string name="oreilles_franchement_point_es_en_avant_et_nuque_fl_chie_cheval_confiant_cavalier_confiance">Oreilles franchement pointées en avant et nuque fléchie = cheval confiant. Cavalier : confiance</string>
+    <string name="oreilles_point_es_franchement_en_avant_et_nuque_soutenue_cheval_attentif_cavalier_franchise">Oreilles pointées franchement en avant et nuque soutenue = cheval attentif. Cavalier : franchise</string>
+
+    <string name="le_licol">Le licol</string>
+    <string name="c_est_un_harnachement_simple_destin_l_attache_et_au_d_placement_en_main_du_cheval_ou_du_poney">C’est un harnachement simple destiné à l’attache et au déplacement en main du cheval ou du poney.</string>
+    <string name="il_peut_tre_en_cuir_ou_en_nylon_il_est_utilis_avec_une_longe_pour_l_attache_et_le_d_placement">Il peut être en cuir ou en nylon, il est utilisé avec une longe pour l’attache et le déplacement.</string>
+    <string name="mettre_le_licol">Mettre le licol</string>
+    <string name="voici_quelques_illustrations">Voici quelques illustrations.</string>
+    <string name="n_h_sitez_pas_demander_votre_enseignant_comment_faire_ou_profiter_de_l_exp_rience_des_autres_cavaliers_de_votre_club">N’hésitez pas à demander à votre enseignant comment faire ou à profiter de l’expérience des autres cavaliers de votre club.</string>
+
+    <string name="attacher">Attacher</string>
+    <string name="la_bonne_longueur_d_attache_de_la_longe_est_importante_elle_correspond_la_longueur_de_l_encolure_de_la_nuque_au_garrot">La bonne longueur d’attache de la longe est importante (elle correspond à la longueur de l’encolure, de la nuque au garrot).</string>
+    <string name="plus_longue_votre_cheval_ou_votre_poney_risque_de_passer_la_t_te_sous_sa_longe_de_se_faire_peur_en_la_relevant_ou_de_se_d_battre">Plus longue, votre cheval ou votre poney risque de passer la tête sous sa longe, de se faire peur en la relevant ou de se débattre.</string>
+    <string name="il_peut_aussi_passer_l_un_de_ses_membres_par_dessus_sa_longe_et_en_relevant_la_t_te_soulever_ce_membre_et_se_retrouver_sur_trois_pieds">Il peut aussi passer l’un de ses membres par-dessus sa longe, et en relevant la tête, soulever ce membre et se retrouver sur trois pieds.</string>
+    <string name="c_est_ce_que_l_on_appelle_une_prise_de_longe_plus_court_il_se_sent_prisonnier_et_s_efforce_de_se_lib_rer_en_tirant_en_arri_re_ce_que_l_on_appelle_tirer_au_renard">C’est ce que l’on appelle une prise de longe. Plus court, il se sent prisonnier et s’efforce de se libérer en tirant en arrière (ce que l’on appelle « Tirer au Renard »).</string>
+    <string name="les_croquis_montrent_les_diff_rentes_phases_du_n_ud_d_attache_de_s_curit_permettant_de_lib_rer_rapidement_un_animal_en_cas_de_difficult">Les croquis montrent les différentes phases du nœud d’attache de sécurité, permettant de libérer rapidement un animal en cas de difficulté.</string>
+    <string name="c_est_ce_que_l_on_appelle_une_prise_de_longe">C’est ce que l’on appelle une prise de longe.</string>
+    <string name="plus_court_il_se_sent_prisonnier_et_s_efforce_de_se_lib_rer_en_tirant_en_arri_re_ce_que_l_on_appelle_tirer_au_renard">Plus court, il se sent prisonnier et s’efforce de se libérer en tirant en arrière (ce que l’on appelle « Tirer au Renard »).</string>
+    <string name="_1_passer_la_longe_dans_l_anneau">1. Passer la longe dans l’anneau</string>
+    <string name="_2_passer_par_dessus_la_premi_re_boucle">2. Passer par dessus la première boucle</string>
+    <string name="_3_faire_une_deuxi_me_boucle">3. Faire une deuxième boucle</string>
+    <string name="_4_enfiler_la_deuxi_me_boucle_dans_la_premi_re">4. Enfiler la deuxième boucle dans la première</string>
+    <string name="_5_tirer_pour_serrer_sur_la_longe_vers_le_licol">5. Tirer pour serrer sur la longe vers le licol</string>
+    <string name="_6_tirer_sur_la_longe_vers_le_sol_pour_lib_rer_le_cheval_ou_le_poney">6. Tirer sur la longe vers le sol pour libérer le cheval ou le poney</string>
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+
+    <!-- Title Menu -->
+    <string name="galop_1">Galop 1</string>
+    <string name="galop_2">Galop 2</string>
+    <string name="galop_3">Galop 3</string>
+    <string name="galop_4">Galop 4</string>
+    <string name="galop_5">Galop 5</string>
+    <string name="galop_6">Galop 6</string>
+    <string name="galop_7">Galop 7</string>
+    <string name="avatar">Avatar</string>
+    <string name="galops">Galops</string>
+    <string name="logout">LOGOUT</string>
+    <string name="pr_c_dent">Précédent</string>
+    <string name="suivant">Suivant</string>
 </resources>
