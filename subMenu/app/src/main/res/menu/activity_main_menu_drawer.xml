@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorAccent"
+    tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/galops"
+            android:title="galops">
+
+            <menu android:id="@+id/sousmenu">
+                <item
+                    android:id="@+id/activity_main_drawer_lunch"
+                    android:title="galop_1"/>
+
+                <item
+                    android:id="@+id/activity_main_drawer_settings"
+                    android:title="galop_2" />
+                <item
+                    android:id="@+id/activity_main_drawer_galop3"
+                    android:title="galop_3"/>
+
+                <item
+                    android:id="@+id/activity_main_drawer_galop4"
+                    android:title="galop_4"/>
+
+
+            </menu>
+        </item>
+
+
+</menu>
+
