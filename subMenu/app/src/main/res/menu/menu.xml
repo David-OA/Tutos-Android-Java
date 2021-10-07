@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/option"
-        android:title="Options">
+    <item android:id="@+id/Galop"
+        android:title="Galop">
 
         <menu android:id="@+id/sousmenu">
-            <item android:id="@+id/favoris"
-                android:title="Favoris"   />
+            <item android:id="@+id/galop1"
+                android:title="Galop 1"   />
 
-            <item android:id="@+id/stats"
-                android:title="Stats"  />
+            <item android:id="@+id/galop2"
+                android:title="Galop 2"  />
+
+            <item android:id="@+id/galop3"
+                android:title="Galop 3"  />
+
+            <item android:id="@+id/galop4"
+                android:title="Galop 4"  />
+
+            <item android:id="@+id/galop5"
+                android:title="Galop5"  />
+
+            <item android:id="@+id/galop6"
+                android:title="Galop 6"  />
+
+            <item android:id="@+id/galop7"
+                android:title="Galop 7"  />
+
         </menu>
     </item>
 

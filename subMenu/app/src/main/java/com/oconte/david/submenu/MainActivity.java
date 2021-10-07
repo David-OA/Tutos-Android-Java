@@ -57,14 +57,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(MenuItem item) {
         //On regarde quel item a été cliqué grâce à son id et on déclenche une action
         switch (item.getItemId()) {
-            case R.id.option:
+            case R.id.Galop:
                 Toast.makeText(MainActivity.this, "Option", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.favoris:
-                Toast.makeText(MainActivity.this, "Favoris", Toast.LENGTH_SHORT).show();
+            case R.id.galop1:
+                Toast.makeText(MainActivity.this, "Galop1", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.stats:
-                Toast.makeText(MainActivity.this, "Stats", Toast.LENGTH_SHORT).show();
+            case R.id.galop2:
+                Toast.makeText(MainActivity.this, "Galop2", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.galop3:
+                Toast.makeText(MainActivity.this, "Galop3", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.galop4:
+                Toast.makeText(MainActivity.this, "Galop4", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.galop5:
+                Toast.makeText(MainActivity.this, "Galop5", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.galop6:
+                Toast.makeText(MainActivity.this, "Galop6", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.galop7:
+                Toast.makeText(MainActivity.this, "Galop7", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.quitter:
                 //Pour fermer l'application il suffit de faire finish()
