@@ -1,45 +1,47 @@
 package com.oconte.david.firestoretuto;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Restaurant {
 
-    private String restaurantUid;
-    private List<String> likedRestaurants;
+    public String urlPhoto;
+    public String userName;
+    public String idUser;
 
 
-    public Restaurant(String restaurantUid, List<String> likedRestaurants) {
-        this.restaurantUid = restaurantUid;
-        this.likedRestaurants = likedRestaurants;
+    public Restaurant(String urlPhoto, String userName, String idUser) {
+        this.urlPhoto = urlPhoto;
+        this.userName = userName;
+        this.idUser = idUser;
     }
 
-    public String getRestaurantUid() {
-        return restaurantUid;
+    public Restaurant() {
+
     }
 
-    public List<String> getLikedRestaurants() {
-        return likedRestaurants;
+
+    // GETTERS
+    public String getUrlPhoto() {
+        return urlPhoto;
     }
 
-    public void addLikedRestaurant(String restaurantUid){
-        if(likedRestaurants == null) {
-            this.likedRestaurants = new ArrayList<>();
-        }
-        this.likedRestaurants.add(restaurantUid);
+    public String getUserName() {
+        return userName;
     }
 
-    public void removeLikedRestaurant(String restaurantUid){
-        if(likedRestaurants != null) {
-            int position = 0;
-            for (String uid : likedRestaurants) {
-                if (uid.equals(restaurantUid)) likedRestaurants.remove(position);
-                position += 1;
-            }
-        }
+    public String getIdUser() {
+        return idUser;
     }
 
-    public void setRestaurantUid(String restaurantUid) {
-        this.restaurantUid = restaurantUid;
+
+    //SETTERS
+    public void setUrlPhoto(String urlPhoto) {
+        this.urlPhoto = urlPhoto;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 }
