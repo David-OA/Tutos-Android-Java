@@ -2,6 +2,7 @@ package com.oconte.david.firestoretuto;
 
 import static android.content.ContentValues.TAG;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.addIdUser) EditText editText2;
     @BindView(R.id.addUrlOhoto) EditText editText3;
 
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference collectionReference = db.collection("restaurants");
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final CollectionReference collectionReference = db.collection("restaurants");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                             @Override
                             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                //imageButton.setBackground();
                                 Restaurant restaurant = null;
                                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
