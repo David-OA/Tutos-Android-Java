@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/UrlOhoto"
+        android:id="@+id/urlPhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="45dp"/>
 
     <TextView
-        android:id="@+id/Username"
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -45,7 +45,7 @@
         android:background="@color/colorPrimary"/>
 
     <EditText
-        android:id="@+id/addUrlOhoto"
+        android:id="@+id/addUrlPhoto"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"

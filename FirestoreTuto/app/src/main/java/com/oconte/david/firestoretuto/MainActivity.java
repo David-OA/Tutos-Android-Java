@@ -6,9 +6,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,23 +15,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
+import com.oconte.david.firestoretuto.databinding.ActivityMainBinding;
 
 import java.util.Objects;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.click) ImageButton imageButton;
-    @BindView(R.id.click2) ImageButton imageButton2;
-    @BindView(R.id.UrlOhoto) TextView textView;
-    @BindView(R.id.Username) TextView textView2;
-    @BindView(R.id.idUser) TextView textView3;
-
-    @BindView(R.id.addUsername) EditText editText;
-    @BindView(R.id.addIdUser) EditText editText2;
-    @BindView(R.id.addUrlOhoto) EditText editText3;
+    private ActivityMainBinding binding;
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final CollectionReference collectionReference = db.collection("restaurants");
@@ -42,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
         ButterKnife.bind(this);
 
         this.conditionButtonClick();
@@ -62,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         //si document n'est pas vide le boutton prend la couleur verte.
                         if (!queryDocumentSnapshots.isEmpty()) {
 
-                            imageButton.setBackgroundColor(Color.GREEN);
+                            binding.click.setBackgroundColor(Color.GREEN);
 
                         }
                     }
@@ -70,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void takeData() {
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        binding.click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -79,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                             @Override
                             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                imageButton.setBackgroundColor(Color.BLUE);
+                                binding.click.setBackgroundColor(Color.BLUE);
                                 Restaurant restaurant = null;
                                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
@@ -93,9 +84,9 @@ public class MainActivity extends AppCompatActivity {
                                 String idUser = restaurant.getIdUser();
                                 String urlPhoto = restaurant.getUrlPhoto();
 
-                                textView.setText(userName);
-                                textView2.setText(idUser);
-                                textView3.setText(urlPhoto);
+                                binding.userName.setText(userName);
+                                binding.idUser.setText(idUser);
+                                binding.urlPhoto.setText(urlPhoto);
 
                             }
                         });
@@ -104,12 +95,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addData() {
-        imageButton2.setOnClickListener(new View.OnClickListener() {
+        binding.click2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    String userName = editText.getText().toString();
-                    String idUser = editText2.getText().toString();
-                    String urlPhoto = editText3.getText().toString();
+                    String userName = binding.addUsername.getText().toString();
+                    String idUser = binding.addIdUser.getText().toString();
+                    String urlPhoto = binding.addUrlPhoto.getText().toString();
 
                     //je crée un new Restaurant avec les info saisies.
                     Restaurant restaurant = new Restaurant(urlPhoto,userName,idUser);
