@@ -10,19 +10,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.Objects;
 
@@ -50,10 +45,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        this.conditionButtonClick();
+
         this.takeData();
 
         this.addData();
 
+    }
+
+    public void conditionButtonClick() {
+        collectionReference.document("qW5cKz12j6z3eawymJ3d").collection("liked")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        //si document n'est pas vide le boutton prend la couleur verte.
+                        if (!queryDocumentSnapshots.isEmpty()) {
+
+                            imageButton.setBackgroundColor(Color.GREEN);
+
+                        }
+                    }
+                });
     }
 
     public void takeData() {
@@ -66,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                             @Override
                             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                //imageButton.setBackground();
+                                imageButton.setBackgroundColor(Color.BLUE);
                                 Restaurant restaurant = null;
                                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
@@ -98,9 +111,12 @@ public class MainActivity extends AppCompatActivity {
                     String idUser = editText2.getText().toString();
                     String urlPhoto = editText3.getText().toString();
 
+                    //je crée un new Restaurant avec les info saisies.
                     Restaurant restaurant = new Restaurant(urlPhoto,userName,idUser);
+
+                    // j'ajoute un document ds une collection liked et je specifie le non du document ici l'idUser saisi ds l'éditexte
                     collectionReference.document("qW5cKz12j6z3eawymJ3d")
-                            .collection("liked").add(restaurant);
+                            .collection("liked").document(idUser).set(restaurant, SetOptions.merge());
 
             }
         });
