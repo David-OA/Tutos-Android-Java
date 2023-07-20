@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                             textView.append(workInfo.getOutputData().getString(MyWorker.TASK_DESC) + "\n");
 
                         //Displaying the status into TextView
+                        assert workInfo != null;
                         textView.append(workInfo.getState().name() + "\n");
                     }
                 });

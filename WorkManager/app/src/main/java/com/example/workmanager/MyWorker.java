@@ -49,7 +49,6 @@ public class MyWorker extends Worker {
                 .putString(TASK_DESC2, "I add some data")
                 .build();
 
-
         return Result.success(data);
     }
 
